@@ -11,7 +11,7 @@ import WorkOutlineIcon from "@material-ui/icons/WorkOutline";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "30%",
+    width: "100%",
     maxWidth: 360,
     alignItems: "left",
     backgroundColor: theme.palette.background.paper,

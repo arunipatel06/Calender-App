@@ -45,7 +45,9 @@ const Chart = () => {
       <Paper className={classes.paperComponent}>
         <Grid container>
           <Grid xs={8}>
-            <div>Analytics</div>
+            <div style={{ textAlign: "left", margin: "3% 0% 0%" }}>
+              Analytics
+            </div>
             <div className={classes.parent}>
               <div className={classes.title}>254/500</div>
               <div className={classes.subtitle}>Attribute</div>
@@ -64,7 +66,7 @@ const Chart = () => {
             </div>
           </Grid>
           <Grid xs={4} className={classes.buttonContainer}>
-            <div style={{ float: "right" }}>
+            <div style={{ float: "right", margin: "5% 25%" }}>
               <Button
                 className={classes.button}
                 variant="contained"
