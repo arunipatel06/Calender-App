@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     color: "white",
-    background: "blue",
+    background: "#4885f7",
     align: "right",
   },
 }));
@@ -45,7 +45,7 @@ const Chart = () => {
       <Paper className={classes.paperComponent}>
         <Grid container>
           <Grid xs={8}>
-            <div style={{ textAlign: "left", margin: "3% 0% 0%" }}>
+            <div style={{ textAlign: "left", margin: "20px 0px 0px 20px" }}>
               Analytics
             </div>
             <div className={classes.parent}>

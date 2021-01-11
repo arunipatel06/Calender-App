@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "right",
     float: "right",
+    padding: "20px 0px",
     "& > *": {
       margin: theme.spacing(1),
     },

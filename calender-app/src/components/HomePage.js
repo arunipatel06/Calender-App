@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     textAlign: "center",
     color: theme.palette.text.secondary,
+    marginBottom: "10px",
   },
   logo: {
     fontSize: "20px",
@@ -20,19 +21,22 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     color: "#306bbf",
   },
-  menuList: {},
+  rightPanel: {
+    overflow: "hidden",
+  },
   chart: {
-    width: "100%",
+    padding: "2% 5%",
+    marginTop: "2px",
+    backgroundColor: "#f5f6f8",
   },
   button: {
     borderRadius: "25px",
     padding: "7px 45px",
+    marginTop: "20px",
     textTransform: "none",
-    hover: {
-      color: "black",
-    },
+    "&:hover": { color: "#4885f7", backgroundColor: "transparent" },
     color: "white",
-    backgroundColor: "blue",
+    backgroundColor: "#4885f7",
   },
 }));
 const HomePage = () => {
@@ -44,30 +48,36 @@ const HomePage = () => {
           <div className={classes.logo}>LOGO HERE</div>
         </Grid>
         <Grid xs={10}>
-          <Paper className={classes.paperComponent}>
+          <Paper elevation={3} className={classes.paperComponent}>
             <Navbar />
           </Paper>
         </Grid>
         <Grid xs={2}>
           <MenuList />
         </Grid>
-        <Grid xs={10} style={{ overflow: "hidden", margin: "2% 0%" }}>
-          <div style={{ float: "right", marginRight: "5%" }}>
-            <Button variant="outlined" size="large" className={classes.button}>
-              Upgrade
-            </Button>
-          </div>
-
-          <Paper className={classes.paperComponent}>
-            <div className={classes.chart}>
-              <div>
-                <ScoreCards />
-              </div>
-              <div>
-                <Chart />
-              </div>
+        <Grid xs={10}>
+          <div className={classes.rightPanel}>
+            <div style={{ float: "right", marginRight: "5%" }}>
+              <Button
+                variant="outlined"
+                size="large"
+                className={classes.button}
+              >
+                Upgrade
+              </Button>
             </div>
-          </Paper>
+
+            <Paper className={classes.paperComponent}>
+              <div className={classes.chart}>
+                <div>
+                  <ScoreCards />
+                </div>
+                <div style={{ paddingTop: "20px" }}>
+                  <Chart />
+                </div>
+              </div>
+            </Paper>
+          </div>
         </Grid>
       </Grid>
     </div>
