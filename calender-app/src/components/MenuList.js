@@ -7,7 +7,13 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 
 //icons
-import WorkOutlineIcon from "@material-ui/icons/WorkOutline";
+import CardTravelIcon from "@material-ui/icons/CardTravel";
+import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows";
+import FeaturedPlayListIcon from "@material-ui/icons/FeaturedPlayList";
+import ConfirmationNumberIcon from "@material-ui/icons/ConfirmationNumber";
+import FilterNoneIcon from "@material-ui/icons/FilterNone";
+import ImageAspectRatioIcon from "@material-ui/icons/ImageAspectRatio";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,47 +22,89 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "left",
     backgroundColor: theme.palette.background.paper,
   },
+  list: {
+    "&:hover": { color: "#deeeff", backgroundColor: "#4a88f9" },
+  },
+  selectedItem: {
+    color: "#5e5f63",
+    backgroundColor: "#e6f2ff",
+    borderRight: "4px solid #2b68d6",
+  },
 }));
 
 const MenuList = () => {
   const classes = useStyles();
+  const [selectedIndex, setSelectedIndex] = React.useState(1);
 
+  const handleListItemClick = (event, index) => {
+    setSelectedIndex(index);
+  };
   return (
     <div className={classes.root}>
       <List>
-        <ListItem button>
+        <ListItem
+          className={selectedIndex === 0 ? classes.selectedItem : classes.list}
+          button
+          selected={selectedIndex === 0}
+          onClick={(event) => handleListItemClick(event, 0)}
+        >
           <ListItemIcon>
-            <WorkOutlineIcon />
+            <DesktopWindowsIcon />
           </ListItemIcon>
           <ListItemText primary="Menu Option 1" />
         </ListItem>
-        <ListItem button>
+        <ListItem
+          className={selectedIndex === 1 ? classes.selectedItem : classes.list}
+          button
+          selected={selectedIndex === 1}
+          onClick={(event) => handleListItemClick(event, 1)}
+        >
           <ListItemIcon>
-            <WorkOutlineIcon />
+            <CardTravelIcon />
           </ListItemIcon>
           <ListItemText primary="Menu Option 2" />
         </ListItem>
-        <ListItem button>
+        <ListItem
+          className={selectedIndex === 2 ? classes.selectedItem : classes.list}
+          button
+          selected={selectedIndex === 2}
+          onClick={(event) => handleListItemClick(event, 2)}
+        >
           <ListItemIcon>
-            <WorkOutlineIcon />
+            <FeaturedPlayListIcon />
           </ListItemIcon>
           <ListItemText primary="Menu Option 3" />
         </ListItem>
-        <ListItem button>
+        <ListItem
+          className={selectedIndex === 3 ? classes.selectedItem : classes.list}
+          button
+          selected={selectedIndex === 3}
+          onClick={(event) => handleListItemClick(event, 3)}
+        >
           <ListItemIcon>
-            <WorkOutlineIcon />
+            <ConfirmationNumberIcon />
           </ListItemIcon>
           <ListItemText primary="Menu Option 4" />
         </ListItem>
-        <ListItem button>
+        <ListItem
+          className={selectedIndex === 4 ? classes.selectedItem : classes.list}
+          button
+          selected={selectedIndex === 4}
+          onClick={(event) => handleListItemClick(event, 4)}
+        >
           <ListItemIcon>
-            <WorkOutlineIcon />
+            <ImageAspectRatioIcon />
           </ListItemIcon>
           <ListItemText primary="Menu Option 5" />
         </ListItem>
-        <ListItem button>
+        <ListItem
+          className={selectedIndex === 5 ? classes.selectedItem : classes.list}
+          button
+          selected={selectedIndex === 5}
+          onClick={(event) => handleListItemClick(event, 5)}
+        >
           <ListItemIcon>
-            <WorkOutlineIcon />
+            <FilterNoneIcon />
           </ListItemIcon>
           <ListItemText primary="Menu Option 6" />
         </ListItem>
