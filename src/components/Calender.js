@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme) => ({
   body: {
     position: "relative",
     backgroundColor: theme.palette.background.default,
-    margin: "100px 388px 50px",
+    margin: "100px auto 50px",
+    width: "935px",
     outline: 0,
     overflow: "hidden",
   },

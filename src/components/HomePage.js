@@ -72,7 +72,7 @@ const HomePage = () => {
   const classes = useStyles();
 
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       <Grid container>
         <Grid xs={2}>
           <div className={classes.logo}>LOGO HERE</div>
