@@ -6,14 +6,17 @@ import Paper from "@material-ui/core/Paper";
 import "fontsource-roboto";
 
 //icons
-import WorkOutlineIcon from "@material-ui/icons/WorkOutline";
+import DataUsageOutlinedIcon from "@material-ui/icons/DataUsageOutlined";
+import PolicyIcon from "@material-ui/icons/Policy";
+import FindInPageIcon from "@material-ui/icons/FindInPage";
+import AssignmentOutlinedIcon from "@material-ui/icons/AssignmentOutlined";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   scoreGrid: {
-    padding: theme.spacing(4),
+    padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
   },
@@ -22,13 +25,34 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
   },
   scoreIcon: {
-    paddingRight: "40px",
+    paddingRight: "20px",
+    // fontSize: "large",
+  },
+  icon: {
+    fontSize: "50px",
+    margin: "0px",
+    color: "#1b6fdf",
   },
   scoreText: {
-    align: "right",
+    float: "left",
+    fontWeight: "700",
+    fontSize: "20px",
+    color: "#2d2d2f",
   },
   scoreSubtitle: {
-    paddingLeft: "30px",
+    fontWeight: "normal",
+    textTransform: "uppercase",
+    fontSize: "15px",
+    color: "#b9b9bb",
+    paddingLeft: "26px",
+  },
+  scoreSubtitle1: {
+    textTransform: "uppercase",
+    paddingLeft: "0px",
+    fontWeight: "normal",
+    fontTransform: "Uppercase",
+    fontSize: "15px",
+    color: "#b9b9bb",
   },
 }));
 
@@ -47,14 +71,26 @@ const ScoreCards = () => {
           <Paper className={classes.scoreGrid}>
             <div className={classes.scoreCard}>
               <div className={classes.scoreIcon}>
-                <WorkOutlineIcon />
+                <DataUsageOutlinedIcon
+                  disableElevation={true}
+                  className={classes.icon}
+                />
               </div>
 
-              <div className={classes.scoreText}>
+              <div
+                className={classes.scoreText}
+                style={{ paddingLeft: "20px" }}
+              >
                 {numbers.attribute1}
-                <Typography variant="Subtitle1" component="h6">
-                  Attribute 1
-                </Typography>
+                <div className={classes.scoreSubtitle1}>
+                  <Typography
+                    className={classes.scoreSubtitle1}
+                    variant="Subtitle1"
+                    component="h6"
+                  >
+                    Attribute 1
+                  </Typography>
+                </div>
               </div>
             </div>
           </Paper>
@@ -63,18 +99,20 @@ const ScoreCards = () => {
           <Paper className={classes.scoreGrid}>
             <div className={classes.scoreCard}>
               <div className={classes.scoreIcon}>
-                <WorkOutlineIcon />
+                <PolicyIcon disableElevation={true} className={classes.icon} />
               </div>
 
               <div className={classes.scoreText}>
                 {numbers.attribute2}
-                <Typography
-                  className={classes.scoreSubtitle}
-                  variant="Subtitle1"
-                  component="h6"
-                >
-                  Attribute 2
-                </Typography>
+                <div className={classes.scoreSubtitle}>
+                  <Typography
+                    className={classes.scoreSubtitle}
+                    variant="Subtitle1"
+                    component="h6"
+                  >
+                    Attribute 2
+                  </Typography>
+                </div>
               </div>
             </div>
           </Paper>
@@ -83,18 +121,23 @@ const ScoreCards = () => {
           <Paper className={classes.scoreGrid}>
             <div className={classes.scoreCard}>
               <div className={classes.scoreIcon}>
-                <WorkOutlineIcon />
+                <AssignmentOutlinedIcon
+                  disableElevation={true}
+                  className={classes.icon}
+                />
               </div>
 
               <div className={classes.scoreText}>
                 {numbers.attribute3}
-                <Typography
-                  className={classes.scoreSubtitle}
-                  variant="Subtitle1"
-                  component="h6"
-                >
-                  Attribute 3
-                </Typography>
+                <div className={classes.scoreSubtitle}>
+                  <Typography
+                    className={classes.scoreSubtitle}
+                    variant="Subtitle1"
+                    component="h6"
+                  >
+                    Attribute 3
+                  </Typography>
+                </div>
               </div>
             </div>
           </Paper>
@@ -103,18 +146,23 @@ const ScoreCards = () => {
           <Paper className={classes.scoreGrid}>
             <div className={classes.scoreCard}>
               <div className={classes.scoreIcon}>
-                <WorkOutlineIcon />
+                <FindInPageIcon
+                  disableElevation={true}
+                  className={classes.icon}
+                />
               </div>
 
               <div className={classes.scoreText}>
                 {numbers.attribute4}
-                <Typography
-                  className={classes.scoreSubtitle}
-                  variant="Subtitle1"
-                  component="h6"
-                >
-                  Attribute 4
-                </Typography>
+                <div className={classes.scoreSubtitle}>
+                  <Typography
+                    className={classes.scoreSubtitle}
+                    variant="Subtitle1"
+                    component="h6"
+                  >
+                    Attribute 4
+                  </Typography>
+                </div>
               </div>
             </div>
           </Paper>

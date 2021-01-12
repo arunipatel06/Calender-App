@@ -8,7 +8,6 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 
 //icons
 import CardTravelIcon from "@material-ui/icons/CardTravel";
-import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import DesktopWindowsIcon from "@material-ui/icons/DesktopWindows";
 import FeaturedPlayListIcon from "@material-ui/icons/FeaturedPlayList";
 import ConfirmationNumberIcon from "@material-ui/icons/ConfirmationNumber";
@@ -18,7 +17,7 @@ import ImageAspectRatioIcon from "@material-ui/icons/ImageAspectRatio";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
-    maxWidth: 360,
+    maxWidth: 300,
     alignItems: "left",
     backgroundColor: theme.palette.background.paper,
   },
@@ -34,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
 const MenuList = () => {
   const classes = useStyles();
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   const handleListItemClick = (event, index) => {
     setSelectedIndex(index);

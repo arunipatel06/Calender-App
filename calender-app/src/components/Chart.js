@@ -13,20 +13,30 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
   },
+  heading: {
+    textAlign: "left",
+    margin: "20px 0px 0px 20px",
+    color: "#2a2b2b",
+    fontSize: "15px",
+    fontWeight: "bold",
+  },
   title: {
     fontSize: "20px",
+    fontWeight: "600",
     paddingLeft: "20px",
     paddingTop: "10px",
+    color: "#4b4c51",
   },
   subtitle: {
     fontSize: "10px",
     paddingTop: "20px",
     paddingLeft: "10px",
+    color: "#aeaeae",
   },
   divider: {
     paddingTop: "10px",
     paddingLeft: "30px",
-    color: "gray",
+    color: "#aeaeae",
   },
   buttonContainer: {
     float: "right",
@@ -45,9 +55,7 @@ const Chart = () => {
       <Paper className={classes.paperComponent}>
         <Grid container>
           <Grid xs={8}>
-            <div style={{ textAlign: "left", margin: "20px 0px 0px 20px" }}>
-              Analytics
-            </div>
+            <div className={classes.heading}>Analytics</div>
             <div className={classes.parent}>
               <div className={classes.title}>254/500</div>
               <div className={classes.subtitle}>Attribute</div>

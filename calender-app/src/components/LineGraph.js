@@ -7,11 +7,11 @@ class LineGraph extends Component {
     this.state = {
       series: [
         {
-          name: "Desktops",
+          name: "Dataset1",
           data: [100, 410, 350, 510, 490, 910, 148],
         },
         {
-          name: "Laptops",
+          name: "Dataset2",
           data: [500, 110, 550, 710, 900, 410, 700],
         },
       ],
