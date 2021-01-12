@@ -3,16 +3,23 @@ import MenuList from "./MenuList";
 import ScoreCards from "./ScoreCards";
 import Navbar from "./Navbar";
 import Chart from "./Chart";
-import { Grid, Button } from "@material-ui/core";
+import { Grid, Button, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+
+//icons
+import SettingsIcon from "@material-ui/icons/Settings";
 
 const useStyles = makeStyles((theme) => ({
   paperComponent: {
     height: "100%",
     textAlign: "center",
     color: theme.palette.text.secondary,
-    marginBottom: "10px",
+    backgroundColor: "#f5f6f8",
   },
   logo: {
     fontSize: "20px",
@@ -27,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
   chart: {
     padding: "2% 5%",
     marginTop: "2px",
-    backgroundColor: "#f5f6f8",
   },
   button: {
     borderRadius: "25px",
@@ -38,9 +44,33 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     backgroundColor: "#4885f7",
   },
+  setting: {
+    color: "#5e5f63",
+    backgroundColor: "#e6f2ff",
+  },
+  menulist: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  div: {
+    width: "100vw",
+    margin: "40px 0px 0px 70px ",
+    float: "top",
+  },
+  text: {
+    textAlign: "left",
+    fontFamily: '"Manrope", sans-serif',
+    fontSize: "10px",
+    fontWeight: "regular",
+    color: "gray",
+  },
+  icon: {
+    color: "#1b6fdf",
+  },
 }));
 const HomePage = () => {
   const classes = useStyles();
+
   return (
     <div>
       <Grid container>
@@ -52,8 +82,10 @@ const HomePage = () => {
             <Navbar />
           </Paper>
         </Grid>
-        <Grid xs={2}>
-          <MenuList />
+        <Grid xs={2} className={classes.menulist}>
+          <div>
+            <MenuList />
+          </div>
         </Grid>
         <Grid xs={10}>
           <div className={classes.rightPanel}>
@@ -67,7 +99,7 @@ const HomePage = () => {
               </Button>
             </div>
 
-            <Paper className={classes.paperComponent}>
+            <Paper className={classes.paperComponent} elevation={0}>
               <div className={classes.chart}>
                 <div>
                   <ScoreCards />
@@ -77,6 +109,25 @@ const HomePage = () => {
                 </div>
               </div>
             </Paper>
+          </div>
+        </Grid>
+        <Grid xs={2}>
+          <div className={classes.setting}>
+            <List>
+              <ListItem button>
+                <ListItemIcon>
+                  <SettingsIcon className={classes.icon} />
+                </ListItemIcon>
+                <ListItemText primary="Setting" />
+              </ListItem>
+            </List>
+          </div>
+        </Grid>
+        <Grid xs={10} style={{ backgroundColor: "#f5f6f8" }}>
+          <div className={classes.div}>
+            <Typography className={classes.text}>
+              Copyright © 2021 Aruni Patel. All rights reserved
+            </Typography>
           </div>
         </Grid>
       </Grid>
