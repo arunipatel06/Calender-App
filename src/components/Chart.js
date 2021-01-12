@@ -97,12 +97,8 @@ const Chart = () => {
                   padding: "5px",
                   textTransform: "none",
                 }}
-                endIcon={
-                  <EventIcon
-                    className={classes.icon}
-                    onClick={() => setOpenCalender(true)}
-                  />
-                }
+                endIcon={<EventIcon className={classes.icon} />}
+                onClick={() => setOpenCalender(true)}
               >
                 {date.startDate} - {date.endDate}
               </Button>
