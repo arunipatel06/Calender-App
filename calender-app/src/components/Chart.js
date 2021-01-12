@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import LineGraph from "./LineGraph";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Button } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
+import Calender from "./Calender";
+
+import EventIcon from "@material-ui/icons/Event";
 
 const useStyles = makeStyles((theme) => ({
   paperComponent: {
@@ -46,10 +49,22 @@ const useStyles = makeStyles((theme) => ({
     background: "#4885f7",
     align: "right",
   },
+  icon: {
+    fontSize: "40px",
+    color: "#1b6fdf",
+  },
 }));
 
 const Chart = () => {
   const classes = useStyles();
+  const [openCalender, setOpenCalender] = useState(false);
+  const currentDate = new Date().toString().split(" ", 4);
+
+  const [date, setDate] = useState({
+    startDate: currentDate.join(" "),
+    endDate: currentDate.join(" "),
+  });
+
   return (
     <div>
       <Paper className={classes.paperComponent}>
@@ -74,14 +89,31 @@ const Chart = () => {
             </div>
           </Grid>
           <Grid xs={4} className={classes.buttonContainer}>
-            <div style={{ float: "right", margin: "5% 25%" }}>
+            <div style={{ float: "right", marginRight: "5%" }}>
               <Button
-                className={classes.button}
-                variant="contained"
-                color="primary"
+                style={{
+                  border: "1px solid #e7e1e1",
+                  marginTop: "20px",
+                  padding: "5px",
+                  textTransform: "none",
+                }}
+                endIcon={
+                  <EventIcon
+                    className={classes.icon}
+                    onClick={() => setOpenCalender(true)}
+                  />
+                }
               >
-                Upgrade
+                {date.startDate} - {date.endDate}
               </Button>
+
+              {openCalender ? (
+                <Calender
+                  openCalender={openCalender}
+                  setOpenCalender={setOpenCalender}
+                  setDate={setDate}
+                />
+              ) : null}
             </div>
           </Grid>
         </Grid>
