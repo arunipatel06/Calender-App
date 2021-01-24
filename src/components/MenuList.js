@@ -31,12 +31,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MenuList = () => {
+const MenuList = ({ setSeriesIndex }) => {
   const classes = useStyles();
   const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   const handleListItemClick = (event, index) => {
     setSelectedIndex(index);
+    setSeriesIndex(index);
   };
   return (
     <div className={classes.root}>

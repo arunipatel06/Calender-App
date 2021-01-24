@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Chart = () => {
+const Chart = ({ seriesIndex }) => {
   const classes = useStyles();
   const [openCalender, setOpenCalender] = useState(false);
   const currentDate = new Date().toString().split(" ", 4);
@@ -114,7 +114,7 @@ const Chart = () => {
           </Grid>
         </Grid>
 
-        <LineGraph />
+        <LineGraph seriesIndex={seriesIndex} />
       </Paper>
     </div>
   );

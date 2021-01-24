@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MenuList from "./MenuList";
 import ScoreCards from "./ScoreCards";
 import Navbar from "./Navbar";
@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 const HomePage = () => {
   const classes = useStyles();
-
+  const [seriesIndex, setSeriesIndex] = useState(0);
   return (
     <div style={{ overflowX: "hidden" }}>
       <Grid container>
@@ -84,7 +84,7 @@ const HomePage = () => {
         </Grid>
         <Grid xs={2} className={classes.menulist}>
           <div>
-            <MenuList />
+            <MenuList setSeriesIndex={setSeriesIndex} />
           </div>
         </Grid>
         <Grid xs={10}>
@@ -105,7 +105,7 @@ const HomePage = () => {
                   <ScoreCards />
                 </div>
                 <div style={{ paddingTop: "20px" }}>
-                  <Chart />
+                  <Chart seriesIndex={seriesIndex} />
                 </div>
               </div>
             </Paper>
