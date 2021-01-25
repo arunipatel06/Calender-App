@@ -1,59 +1,10 @@
 import React, { useState } from "react";
 import LineGraph from "./LineGraph";
-import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Button } from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 import Calender from "./Calender";
-
+import useStyles from "../JssStyleSheet/JssChart";
 import EventIcon from "@material-ui/icons/Event";
-
-const useStyles = makeStyles((theme) => ({
-  paperComponent: {
-    height: "100%",
-    color: theme.palette.text.secondary,
-  },
-  parent: {
-    display: "flex",
-    flexDirection: "row",
-  },
-  heading: {
-    textAlign: "left",
-    margin: "20px 0px 0px 20px",
-    color: "#2a2b2b",
-    fontSize: "15px",
-    fontWeight: "bold",
-  },
-  title: {
-    fontSize: "20px",
-    fontWeight: "600",
-    paddingLeft: "20px",
-    paddingTop: "10px",
-    color: "#4b4c51",
-  },
-  subtitle: {
-    fontSize: "10px",
-    paddingTop: "20px",
-    paddingLeft: "10px",
-    color: "#aeaeae",
-  },
-  divider: {
-    paddingTop: "10px",
-    paddingLeft: "30px",
-    color: "#aeaeae",
-  },
-  buttonContainer: {
-    float: "right",
-  },
-  button: {
-    color: "white",
-    background: "#4885f7",
-    align: "right",
-  },
-  icon: {
-    fontSize: "40px",
-    color: "#1b6fdf",
-  },
-}));
 
 const Chart = ({ seriesIndex }) => {
   const classes = useStyles();
