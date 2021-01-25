@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/React-DashBoard/static/css/main.7d180cbf.chunk.css",
-    "main.js": "/React-DashBoard/static/js/main.abf5db0a.chunk.js",
-    "main.js.map": "/React-DashBoard/static/js/main.abf5db0a.chunk.js.map",
+    "main.js": "/React-DashBoard/static/js/main.ab89e6b4.chunk.js",
+    "main.js.map": "/React-DashBoard/static/js/main.ab89e6b4.chunk.js.map",
     "runtime-main.js": "/React-DashBoard/static/js/runtime-main.92d25080.js",
     "runtime-main.js.map": "/React-DashBoard/static/js/runtime-main.92d25080.js.map",
-    "static/css/2.a7a13ff3.chunk.css": "/React-DashBoard/static/css/2.a7a13ff3.chunk.css",
+    "static/css/2.2d5c013c.chunk.css": "/React-DashBoard/static/css/2.2d5c013c.chunk.css",
     "static/js/2.cf5495ae.chunk.js": "/React-DashBoard/static/js/2.cf5495ae.chunk.js",
     "static/js/2.cf5495ae.chunk.js.map": "/React-DashBoard/static/js/2.cf5495ae.chunk.js.map",
     "static/js/3.bedf5661.chunk.js": "/React-DashBoard/static/js/3.bedf5661.chunk.js",
     "static/js/3.bedf5661.chunk.js.map": "/React-DashBoard/static/js/3.bedf5661.chunk.js.map",
     "index.html": "/React-DashBoard/index.html",
-    "static/css/2.a7a13ff3.chunk.css.map": "/React-DashBoard/static/css/2.a7a13ff3.chunk.css.map",
+    "static/css/2.2d5c013c.chunk.css.map": "/React-DashBoard/static/css/2.2d5c013c.chunk.css.map",
     "static/css/main.7d180cbf.chunk.css.map": "/React-DashBoard/static/css/main.7d180cbf.chunk.css.map",
     "static/js/2.cf5495ae.chunk.js.LICENSE.txt": "/React-DashBoard/static/js/2.cf5495ae.chunk.js.LICENSE.txt",
     "static/media/Image.e994ab05.jpg": "/React-DashBoard/static/media/Image.e994ab05.jpg",
@@ -19,9 +19,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.92d25080.js",
-    "static/css/2.a7a13ff3.chunk.css",
+    "static/css/2.2d5c013c.chunk.css",
     "static/js/2.cf5495ae.chunk.js",
     "static/css/main.7d180cbf.chunk.css",
-    "static/js/main.abf5db0a.chunk.js"
+    "static/js/main.ab89e6b4.chunk.js"
   ]
 }
